@@ -69,23 +69,93 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="p-10">
-        <h2 class="text-3xl font-bold text-center mb-10">Contact</h2>
-        <div class="max-w-md mx-auto">
-            <form class="space-y-4">
-                <input type="text" placeholder="Your Name" class="w-full p-3 border rounded">
-                <input type="email" placeholder="Your Email" class="w-full p-3 border rounded">
-                <textarea placeholder="Your Message" rows="5" class="w-full p-3 border rounded"></textarea>
-                <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700">Send Message</button>
-            </form>
-            <p class="text-center text-sm text-gray-500 mt-4">or email me directly at <a href="mailto:cohlerust278@gmail.com" class="text-blue-600">cohlerust278@gmail.com</a></p>
-        </div>
-    </section>
+   <section id="contact" class="p-10">
+	  <h2 class="text-3xl font-bold text-center mb-10">Contact</h2>
+	  <div class="max-w-md mx-auto relative">
+			<!-- Toast Notification -->
+			<div id="toast" class="hidden absolute top-0 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-xl shadow-lg transition-opacity duration-300 z-50">
+			  ✅ Message sent successfully!
+			</div>
+
+			<!-- Contact Form -->
+			<form id="contact-form" class="space-y-4 mt-12">
+			  <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded">
+			  <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded">
+			  <textarea name="message" placeholder="Your Message" rows="5" required class="w-full p-3 border rounded"></textarea>
+			  <button id="submit-btn" type="submit" class="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 flex justify-center items-center gap-2">
+				<span>Send Message</span>
+				<!-- Spinner -->
+				<svg id="spinner" class="hidden animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+				  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+				  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+				</svg>
+			  </button>
+			</form>
+
+			<p class="text-center text-sm text-gray-500 mt-6">
+			  or email me directly at 
+			  <a href="mailto:cohlerust278@gmail.com" class="text-blue-600">cohlerust278@gmail.com</a>
+			</p>
+	  </div>
+	</section>
+
 
     <!-- Footer -->
     <footer class="text-center p-6 bg-white text-gray-500 text-sm">
         &copy; 2025 Harish Pandey. All rights reserved.
     </footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(form);
+  const spinner = document.getElementById('spinner');
+  const toast = document.getElementById('toast');
+  const submitBtn = document.getElementById('submit-btn');
+
+  // Show spinner
+  spinner.classList.remove('hidden');
+  submitBtn.disabled = true;
+
+  fetch('https://formspree.io/f/xnndjppz', { // Replace with your real Formspree ID
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      form.reset();
+      showToast('✅ Message sent successfully!');
+    } else {
+      showToast('❌ Failed to send. Try again.');
+    }
+  }).catch(() => {
+    showToast('❌ Something went wrong.');
+  }).finally(() => {
+    // Hide spinner and re-enable button
+    spinner.classList.add('hidden');
+    submitBtn.disabled = false;
+  });
+
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.remove('hidden');
+    toast.style.opacity = 1;
+
+    setTimeout(() => {
+      toast.style.opacity = 0;
+    }, 4000);
+
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 4500);
+  }
+});
+</script>
+
 
 </body>
 </html>
