@@ -5,157 +5,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harish Pandey | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Orbitron', sans-serif;
+      }
+	
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-[#0f0f0f] text-[#f8f8f8]">
     <!-- Navbar -->
-    <nav class="flex justify-between items-center p-6 shadow-md bg-white">
+    <nav class="flex justify-between items-center p-6 shadow-md bg-[#0f0f0f] text-[#00ffe7]">
         <div class="text-2xl font-bold">Harish Pandey</div>
         <div class="space-x-6">
-            <a href="#home" class="hover:text-blue-600">Home</a>
-            <a href="#projects" class="hover:text-blue-600">Projects</a>
-            <a href="#about" class="hover:text-blue-600">About</a>
-            <a href="#contact" class="hover:text-blue-600">Contact</a>
+            <a href="#home" class="hover:text-[#ff007c] transition">Home</a>
+            <a href="#projects" class="hover:text-[#ff007c] transition">Projects</a>
+            <a href="#about" class="hover:text-[#ff007c] transition">About</a>
+            <a href="#contact" class="hover:text-[#ff007c] transition">Contact</a>
         </div>
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center p-10">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Hi, I'm Harish</h1>
-        <p class="text-lg md:text-xl max-w-2xl">A tech enthusiast and creative mind passionate about building clean, functional websites and digital experiences.</p>
-    </section>
-
-    <!-- Projects Section -->
+    <!-- <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center p-10">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-[#00ffe7]">Hi, I'm Harish</h1>
+        <p class="text-lg md:text-xl max-w-2xl text-[#d6faff]">A tech enthusiast and creative mind passionate about building clean, functional websites and futuristic digital experiences.</p>
+    </section> -->
 	
-	<section id="projects" class="p-10 bg-white">
-    <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-10">
-
-        <!-- ATM Machine Project -->
-        <div class="border rounded-xl p-6 shadow hover:shadow-lg transition">
-            <h3 class="text-2xl font-semibold mb-4">E-Commerce Website</h3>
-            <p class="mb-4">A simple web-based E-Commerce application built for academical assessment under the regulations of the university. Features shop carts, order tracking, payment gateway.</p>
-            <p class="text-sm text-gray-600 mb-2"><strong>Tech:</strong> C#, JavaScript, MSSQL, HTML/CSS</p>
-            <a href="https://github.com/HarishPy/OtakuMart" target="_blank" class="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">View on GitHub</a>
-        </div>
-
-        <!-- Add More Projects Below -->
-
-        <!-- Example: Chords Website -->
-        <div class="border rounded-xl p-6 shadow hover:shadow-lg transition">
-            <h3 class="text-2xl font-semibold mb-4">Desktop Billing Software</h3>
-            <p class="mb-4">A cohesive desktop billing software built for a driving school. Includes input details for customers, real time bill preview, bill saving, bill printing, downloadable transaction history and so on.</p>
-            <p class="text-sm text-gray-600 mb-2"><strong>Tech:</strong> Python, Tkinter, SQLite</p>
-            <a href="https://github.com/HarishPy/Billingsystem" target="_blank" class="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">View on GitHub</a>
-        </div>
-
-        <!-- Example: Personal Blog -->
-        <div class="border rounded-xl p-6 shadow hover:shadow-lg transition">
-            <h3 class="text-2xl font-semibold mb-4">SoulSonickRender</h3>
-            <p class="mb-4">A lightweight and fun web application with minimal features that allows users to generate a list of songs based on the mood the users select.</p>
-            <p class="text-sm text-gray-600 mb-2"><strong>Tech:</strong> JavaScript, Node.js, Axios, CORS, Express, Tailwind CSS</p>
-            <a href="https://harishpy.github.io/SoulSonicRender/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">View Site</a>
-        </div>
-
-    </div>
-</section>
-
-
-    <!-- About Section -->
-    <section id="about" class="p-10 bg-gray-100">
-        <h2 class="text-3xl font-bold text-center mb-10">About Me</h2>
-        <div class="max-w-3xl mx-auto text-center">
-            <p class="text-lg">Hey! I'm <strong>Harish</strong>, a tech enthusiast and creative mind with a strong passion for music, art, philosophy, science, culture, history and politics. I love turning ideas into real, working products — from business sites to fun projects like ATM simulations, blending creativity with technical skills to create unique digital experiences. Let's build something great together!</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-   <section id="contact" class="p-10">
-	  <h2 class="text-3xl font-bold text-center mb-10">Contact</h2>
-	  <div class="max-w-md mx-auto relative">
-			<!-- Toast Notification -->
-			<div id="toast" class="hidden absolute top-0 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-xl shadow-lg transition-opacity duration-300 z-50">
-			  ✅ Message sent successfully!
-			</div>
-
-			<!-- Contact Form -->
-			<form id="contact-form" class="space-y-4 mt-12">
-			  <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded">
-			  <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded">
-			  <textarea name="message" placeholder="Your Message" rows="5" required class="w-full p-3 border rounded"></textarea>
-			  <button id="submit-btn" type="submit" class="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 flex justify-center items-center gap-2">
-				<span>Send Message</span>
-				<!-- Spinner -->
-				<svg id="spinner" class="hidden animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-				  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-				  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
-				</svg>
-			  </button>
-			</form>
-
-			<p class="text-center text-sm text-gray-500 mt-6">
-			  or email me directly at 
-			  <a href="mailto:cohlerust278@gmail.com" class="text-blue-600">cohlerust278@gmail.com</a>
-			</p>
+	<section id="home" class="relative min-h-screen flex flex-col justify-center items-center text-center p-10 overflow-hidden bg-[#0f0f0f]">
+	  <canvas id="starfield" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
+	  <div class="relative z-10">
+		<h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-[#00ffe7]">Hi, I'm Harish</h1>
+		<p class="text-lg md:text-xl max-w-2xl text-[#d6faff]">A tech enthusiast and creative mind passionate about building clean, functional and futuristic digital experiences.</p>
 	  </div>
 	</section>
 
 
+    <!-- Projects Section -->
+    <section id="projects" class="p-10 bg-[#181818]">
+        <h2 class="text-3xl font-bold text-center text-[#00ffe7] mb-10">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="border border-[#00ffe7] rounded-xl p-6 shadow-lg hover:shadow-[#00ffe7]/50 transition duration-300 bg-[#0f0f0f]">
+                <h3 class="text-2xl font-semibold mb-4 text-[#ff007c]">E-Commerce Website</h3>
+                <p class="mb-4 text-[#d6faff]">A simple web-based E-Commerce application built for academical assessment under the regulations of the university. Features shop carts, order tracking, payment gateway.</p>
+                <p class="text-sm text-[#8f8f8f] mb-2"><strong>Tech:</strong> C#, JavaScript, MSSQL, HTML/CSS</p>
+                <a href="https://github.com/HarishPy/OtakuMart" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#00ffe7] text-black font-semibold rounded hover:bg-[#00e6d6] transition">View on GitHub</a>
+            </div>
+
+            <div class="border border-[#00ffe7] rounded-xl p-6 shadow-lg hover:shadow-[#00ffe7]/50 transition duration-300 bg-[#0f0f0f]">
+                <h3 class="text-2xl font-semibold mb-4 text-[#ff007c]">Desktop Billing Software</h3>
+                <p class="mb-4 text-[#d6faff]">A cohesive desktop billing software built for a driving school. Includes input details for customers, real time bill preview, bill saving, bill printing, downloadable transaction history and so on.</p>
+                <p class="text-sm text-[#8f8f8f] mb-2"><strong>Tech:</strong> Python, Tkinter, SQLite</p>
+                <a href="https://github.com/HarishPy/Billingsystem" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#00ffe7] text-black font-semibold rounded hover:bg-[#00e6d6] transition">View on GitHub</a>
+            </div>
+
+            <div class="border border-[#00ffe7] rounded-xl p-6 shadow-lg hover:shadow-[#00ffe7]/50 transition duration-300 bg-[#0f0f0f]">
+                <h3 class="text-2xl font-semibold mb-4 text-[#ff007c]">SoulSonick</h3>
+                <p class="mb-4 text-[#d6faff]">A lightweight and fun web application with minimal features that allows users to generate a list of songs based on the mood the users select.</p>
+                <p class="text-sm text-[#8f8f8f] mb-2"><strong>Tech:</strong> JavaScript, Node.js, Tailwind CSS</p>
+                <a href="https://harishpy.github.io/SoulSonicRender/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#00ffe7] text-black font-semibold rounded hover:bg-[#00e6d6] transition">Visit Site</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="p-10 bg-[#121212]">
+        <h2 class="text-3xl font-bold text-center text-[#00ffe7] mb-10">About Me</h2>
+        <div class="max-w-3xl mx-auto text-center">
+            <p class="text-lg text-[#d6faff]"><strong>A man of ambition</strong>, with a love for music, art, philosophy, culture, history, science and technology. I enjoy crafting digital experiences that feel like they came from another timeline.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-10 bg-[#0f0f0f]">
+        <h2 class="text-3xl font-bold text-center text-[#00ffe7] mb-10">Contact</h2>
+        <div class="max-w-md mx-auto relative">
+            <div id="toast" class="hidden absolute top-0 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-xl shadow-lg transition-opacity duration-300 z-50">
+                ✅ Message sent successfully!
+            </div>
+
+            <form id="contact-form" class="space-y-4 mt-12">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 bg-[#181818] border border-[#00ffe7] rounded text-white">
+                <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 bg-[#181818] border border-[#00ffe7] rounded text-white">
+                <textarea name="message" placeholder="Your Message" rows="5" required class="w-full p-3 bg-[#181818] border border-[#00ffe7] rounded text-white"></textarea>
+                <button id="submit-btn" type="submit" class="w-full bg-[#ff007c] hover:bg-[#e60070] text-white p-3 rounded font-semibold transition flex justify-center items-center gap-2">
+                    <span>Send Message</span>
+                    <svg id="spinner" class="hidden animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                    </svg>
+                </button>
+            </form>
+
+            <p class="text-center text-sm text-[#888] mt-6">
+                or email me directly at
+                <a href="mailto:cohlerust278@gmail.com" class="text-[#00ffe7]">cohlerust278@gmail.com</a>
+            </p>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="text-center p-6 bg-white text-gray-500 text-sm">
+    <footer class="text-center p-6 bg-[#181818] text-[#666] text-sm">
         &copy; 2025 Harish Pandey. All rights reserved.
     </footer>
 
-<script>
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
+    <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
 
-  const form = event.target;
-  const formData = new FormData(form);
-  const spinner = document.getElementById('spinner');
-  const toast = document.getElementById('toast');
-  const submitBtn = document.getElementById('submit-btn');
+      const form = event.target;
+      const formData = new FormData(form);
+      const spinner = document.getElementById('spinner');
+      const toast = document.getElementById('toast');
+      const submitBtn = document.getElementById('submit-btn');
 
-  // Show spinner
-  spinner.classList.remove('hidden');
-  submitBtn.disabled = true;
+      spinner.classList.remove('hidden');
+      submitBtn.disabled = true;
 
-  fetch('https://formspree.io/f/xnndjppz', { // Replace with your real Formspree ID
-    method: 'POST',
-    body: formData,
-    headers: {
-      'Accept': 'application/json'
-    }
-  }).then(response => {
-    if (response.ok) {
-      form.reset();
-      showToast('✅ Message sent successfully!');
-    } else {
-      showToast('❌ Failed to send. Try again.');
-    }
-  }).catch(() => {
-    showToast('❌ Something went wrong.');
-  }).finally(() => {
-    // Hide spinner and re-enable button
-    spinner.classList.add('hidden');
-    submitBtn.disabled = false;
-  });
+      fetch('https://formspree.io/f/xnndjppz', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          showToast('✅ Message sent successfully!');
+        } else {
+          showToast('❌ Failed to send. Try again.');
+        }
+      }).catch(() => {
+        showToast('❌ Something went wrong.');
+      }).finally(() => {
+        spinner.classList.add('hidden');
+        submitBtn.disabled = false;
+      });
 
-  function showToast(message) {
-    toast.textContent = message;
-    toast.classList.remove('hidden');
-    toast.style.opacity = 1;
+      function showToast(message) {
+        toast.textContent = message;
+        toast.classList.remove('hidden');
+        toast.style.opacity = 1;
 
-    setTimeout(() => {
-      toast.style.opacity = 0;
-    }, 4000);
+        setTimeout(() => {
+          toast.style.opacity = 0;
+        }, 4000);
 
-    setTimeout(() => {
-      toast.classList.add('hidden');
-    }, 4500);
-  }
-});
+        setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 4500);
+      }
+    });
+    </script>
+	
+	<script>
+	const canvas = document.getElementById('starfield');
+	const ctx = canvas.getContext('2d');
+	let stars = [];
+
+	function resizeCanvas() {
+	  canvas.width = window.innerWidth;
+	  canvas.height = document.getElementById('home').offsetHeight;
+	}
+
+	function createStars(count) {
+	  stars = [];
+	  for (let i = 0; i < count; i++) {
+		stars.push({
+		  x: Math.random() * canvas.width,
+		  y: Math.random() * canvas.height,
+		  r: Math.random() * 1.5 + 0.5,
+		  d: Math.random() * 0.5 + 0.2
+		});
+	  }
+	}
+
+	function animate() {
+	  ctx.clearRect(0, 0, canvas.width, canvas.height);
+	  ctx.fillStyle = '#ffffff';
+	  for (let s of stars) {
+		ctx.beginPath();
+		ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+		ctx.fill();
+
+		s.y += s.d;
+		if (s.y > canvas.height) {
+		  s.y = 0;
+		  s.x = Math.random() * canvas.width;
+		}
+	  }
+	  requestAnimationFrame(animate);
+	}
+
+	window.addEventListener('resize', () => {
+	  resizeCanvas();
+	  createStars(150);
+	});
+
+	resizeCanvas();
+	createStars(150);
+	animate();
 </script>
 
-
+	
 </body>
 </html>
